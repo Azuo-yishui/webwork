@@ -4,12 +4,12 @@
 }
 
 :root {
-    --page-background: #f3f5f7;
-    --card-background: #ffffff;
-    --primary-text: #20252b;
-    --secondary-text: #78818c;
-    --accent-color: #4d7cfe;
-    --line-color: #edf0f3;
+    --page-background: #101312;
+    --card-background: #1b201e;
+    --primary-text: #f1eee7;
+    --secondary-text: #a6aaa1;
+    --accent-color: #d1a866;
+    --line-color: rgba(220, 211, 190, 0.14);
 }
 
 body {
@@ -17,7 +17,7 @@ body {
     margin: 0;
     color: var(--primary-text);
     font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
-    background: var(--page-background);
+    background: radial-gradient(circle at 50% 0%, #29342e 0, var(--page-background) 48%);
 }
 
 /* 使用弹性布局让名片始终在页面中水平、垂直居中 */
@@ -31,90 +31,168 @@ body {
 
 /* 名片主体：12px 圆角与柔和阴影营造简洁的层次感 */
 .profile-card {
+    position: relative;
     width: min(100%, 380px);
-    padding: 42px 36px 36px;
+    overflow: hidden;
+    padding: 34px 38px 27px;
     text-align: center;
-    background: var(--card-background);
-    border: 1px solid rgba(32, 37, 43, 0.04);
+    background: linear-gradient(145deg, rgba(36, 44, 39, 0.98), rgba(21, 25, 23, 0.98));
+    border: 1px solid rgba(220, 211, 190, 0.2);
     border-radius: 12px;
-    box-shadow: 0 14px 35px rgba(32, 37, 43, 0.09);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28), 0 3px 8px rgba(0, 0, 0, 0.14);
     transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.profile-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    content: "";
+    background: radial-gradient(circle, rgba(209, 168, 102, 0.14), transparent 68%);
+    pointer-events: none;
 }
 
 /* 鼠标悬停时卡片轻微上浮，并同步减弱阴影 */
 .profile-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 42px rgba(32, 37, 43, 0.14);
+    box-shadow: 0 31px 68px rgba(0, 0, 0, 0.34), 0 5px 12px rgba(0, 0, 0, 0.17);
+}
+
+/* 顶部英文标签使用细字距，作为名片的视觉锚点 */
+.card-label {
+    margin-bottom: 28px;
+    color: var(--accent-color);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.card-label span {
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    margin: 0 0 3px 8px;
+    background: var(--accent-color);
 }
 
 /* 头像使用渐变背景和姓名首字母，避免依赖外部图片资源 */
 .avatar {
     display: flex;
-    width: 92px;
-    height: 92px;
-    margin: 0 auto 22px;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 21px;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 600;
-    background: linear-gradient(135deg, #6f91ff, #8d72e8);
-    border: 5px solid #f0f3ff;
+    color: #25231e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    background: linear-gradient(145deg, #e8c98e, #ae7f3c);
+    border: 4px solid rgba(239, 220, 177, 0.2);
     border-radius: 50%;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
 }
 
 .profile-header h1 {
     margin: 0;
-    font-size: 28px;
-    font-weight: 600;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
     letter-spacing: 0;
 }
 
 .job-title {
-    margin: 8px 0 28px;
+    margin: 10px 0 17px;
     color: var(--secondary-text);
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.job-title span {
+    margin: 0 5px;
+    color: var(--accent-color);
+}
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 27px;
+    color: #c4c7be;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: #9cc48b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(156, 196, 139, 0.1);
 }
 
 /* address 默认有斜体样式，这里恢复为普通文字 */
 .contact-list {
     display: grid;
-    gap: 12px;
-    padding-top: 24px;
+    gap: 8px;
+    padding-top: 23px;
     border-top: 1px solid var(--line-color);
     font-style: normal;
 }
 
 .contact-item {
     display: flex;
-    min-height: 42px;
+    min-height: 48px;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 13px;
     color: var(--secondary-text);
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
-    transition: color 180ms ease;
+    transition: color 180ms ease, transform 180ms ease;
 }
 
 .contact-item:hover,
 .contact-item:focus-visible {
     color: var(--accent-color);
+    transform: translateX(4px);
 }
 
 .contact-icon {
     display: inline-flex;
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
-    font-size: 16px;
+    font-size: 15px;
+    background: rgba(209, 168, 102, 0.08);
+    border: 1px solid rgba(209, 168, 102, 0.2);
+    border-radius: 50%;
+}
+
+.contact-copy {
+    display: grid;
+    gap: 3px;
+    text-align: left;
+}
+
+.contact-copy small {
+    color: #70786f;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    color: #626b62;
+    font-size: 9px;
+    letter-spacing: 1.5px;
 }
 
 /* 小屏幕下适当收紧内边距，保证内容不会溢出 */
 @media (max-width: 420px) {
     .profile-card {
-        padding: 34px 24px 28px;
+        padding: 30px 24px 24px;
     }
 }

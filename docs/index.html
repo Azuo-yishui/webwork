@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林墨 | 个人名片</title>
+    <title>小明 | 个人名片</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 页面主内容：个人名片卡片 -->
     <main class="page-shell">
         <article class="profile-card">
-            <!-- 使用首字母制作无需额外图片资源的圆形头像 -->
-            <div class="avatar" role="img" aria-label="林墨的头像">林</div>
+            <!-- 顶部身份标签，强化高级名片的品牌感 -->
+            <div class="card-label">PERSONAL PROFILE <span></span></div>
+
+            <!-- 使用姓名首字母制作无需额外图片资源的圆形头像 -->
+            <div class="avatar" role="img" aria-label="小明的头像">小</div>
 
             <!-- 个人基本信息 -->
             <header class="profile-header">
                 <h1>小明</h1>
-                <p class="job-title">品牌设计师</p>
+                <p class="job-title">品牌设计师 <span>/</span> 视觉策略顾问</p>
             </header>
+
+            <!-- 当前工作状态 -->
+            <p class="availability"><span class="status-dot"></span>目前接受品牌合作</p>
 
             <!-- 联系方式列表 -->
             <address class="contact-list">
                 <a href="mailto:linmo@example.com" class="contact-item">
                     <span class="contact-icon" aria-hidden="true">✉</span>
-                    <span>linmo@example.com</span>
+                    <span class="contact-copy"><small>EMAIL</small>linmo@example.com</span>
                 </a>
                 <a href="tel:+8613800138000" class="contact-item">
                     <span class="contact-icon" aria-hidden="true">☎</span>
-                    <span>+86 138 0013 8000</span>
+                    <span class="contact-copy"><small>PHONE</small>+86 138 0013 8000</span>
                 </a>
                 <a href="https://www.linmo.design" class="contact-item" target="_blank" rel="noopener noreferrer">
                     <span class="contact-icon" aria-hidden="true">↗</span>
-                    <span>www.linmo.design</span>
+                    <span class="contact-copy"><small>PORTFOLIO</small>www.linmo.design</span>
                 </a>
             </address>
+
+            <!-- 名片底部装饰性编号 -->
+            <footer class="card-footer">SHANGHAI · 2024 <span>NO. 018</span></footer>
         </article>
     </main>
 </body>
