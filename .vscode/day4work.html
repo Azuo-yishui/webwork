@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>简易灯箱画廊设计</title>
+    <style>
+        body{background:#42c990;color:white;text-align:center}
+        .box{width:90%;margin:0 auto}
+        /* 滚动图片区域 */
+        .scroll{
+            width:100%;
+            overflow:hidden;
+            border-bottom:2px solid red;
+        }
+        .imgList{
+            display:flex;
+            animation: move 10s linear infinite;
+        }
+        @keyframes move{
+            0%{transform: translateX(0)}
+            100%{transform: translateX(-100%)}
+        }
+        .scroll:hover 
+        .imgList{
+            animation-play-state:paused;/*鼠标移入停止滚动*/
+        }
+        .imgList img{width:150px;height:80px;margin:5px;cursor:pointer;}
+        iframe{width:80%;height:400px;margin:50px;border:none}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>简易灯箱画廊设计</h2>
+        <!-- 滚动小图 -->
+        <div class="scroll">
+            <div class="imgList">
+                <a href="10.png" target="showPic"><img src="1.png"></a>
+                <a href="10.png" target="showPic"><img src="2.png"></a>               
+                <a href="10.png" target="showPic"><img src="3.png"></a>
+                <a href="10.png" target="showPic"><img src="4.png"></a>
+                <a href="10.png" target="showPic"><img src="5.png"></a>
+                <a href="10.png" target="showPic"><img src="6.png"></a>
+                <a href="10.png" target="showPic"><img src="7.png"></a>    
+                <!-- 复制一遍图片实现无缝循环 -->
+                <a href="10.png" target="showPic"><img src="8.png"></a>
+                <a href="10.png" target="showPic"><img src="9.png"></a>
+            </div>
+        </div>
+        <!-- 浮动框架iframe -->
+        <iframe name="showPic" src="10.png"></iframe>
+    </div>
+</body>
+</html>

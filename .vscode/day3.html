@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+
+        tr{  
+            height: 50px;
+        }
+        
+        td{
+            text-align: center;
+        }
+    
+        .bg{
+            background-color: rgb(166, 155, 162);
+        }
+          .bg-pink{
+            background-color: rgb(152, 118, 123);
+        }
+        caption{
+            font-size: 30px;
+            font-family: "楷体";
+            color: rgb(0, 0, 0);
+            background-color: rgb(166, 155, 162);
+        }
+        table{
+            border:3px solid red;
+        }
+        td{
+            border:1px solid rgb(111, 255, 0);
+        }
+    </style>
+    
+</head>
+<body>
+    <!----table  caption  tr  th  td-->
+    <!--跨行rowspan    跨列 colspan-->
+    <table width="70%"  align="cenctr" border="1" cellspacing="0" cellpadding="0">
+    <caption>比赛日程安排表</caption>
+      <tr style="height: 50px;background-color: rgb(171, 177, 177);">
+        <th width="100px">日期</th>
+         <th style="width:150px;"> 时间</th>
+      <th>比赛项目</th>
+      <th>比赛地点</th>
+      <th>备注</th>
+     </tr>
+     <tr class="bg">
+     <td rowspan="2">2026-9-22</td>
+     <td>9：00-10：00</td>
+     <td>游泳</td>
+     <td>1号游泳馆</td>
+     <td>讲解</td>
+     </tr>
+     <tr>
+     <td>9：00-10：00</td>
+     <td>舞蹈</td>
+     <td>1号舞蹈馆</td>
+     <td>讲解</td>
+     </tr>
+     <tr class="bg">
+     <td rowspan="2">2026-9-23</td>
+     <td>2：00-3：00</td>
+     <td>羽毛球</td>
+     <td>1号羽毛球馆</td>
+     <td>讲解</td>
+     </tr>
+        <tr>
+        <td>3：00-4：00</td>
+        <td>篮球</td>
+        <td>1号篮球馆</td>
+        <td>讲解</td>
+        </tr>
+        <tr class="bg">
+        <td >2026-9-25</td>
+        <td>4：00-5：00</td>
+        <td>足球</td>
+        <td>1号足球馆</td>
+        <td>讲解</td>
+        </tr>
+    </table>
+     
+    
+</body>
+</html>

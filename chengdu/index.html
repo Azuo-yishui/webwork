@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3eb">
+    <meta name="description" content="蜀韵·成都，循着街巷烟火与山水人文，开启一段从容的成都之旅。">
+    <title>蜀韵·成都 — 慢游天府，细品蜀韵</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">跳转到主要内容</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="蜀韵·成都首页">
+                <span class="brand__mark" aria-hidden="true">蜀</span>
+                <span class="brand__name">蜀韵<span>·</span>成都</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="打开导航菜单">
+                <span></span><span></span>
+            </button>
+            <nav class="site-nav" id="primary-navigation" aria-label="主导航">
+                <a class="site-nav__link" href="index.html" aria-current="page">首页</a>
+                <a class="site-nav__link" href="food.html">美食</a>
+                <a class="site-nav__link" href="sights.html">景点</a>
+                <a class="site-nav__link" href="culture.html">文化</a>
+                <a class="site-nav__link" href="travel.html">攻略</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-label="成都城市风光">
+            <div class="hero__slides" aria-live="polite">
+                <article class="hero__slide is-active" aria-hidden="false">
+                    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="成都街巷建筑与城市风貌" fetchpriority="high">
+                    <div class="hero__shade"></div>
+                    <div class="hero__copy">
+                        <p class="eyebrow">A SLOW JOURNEY INTO CHENGDU</p>
+                        <h1>蜀韵<span>·</span>成都</h1>
+                        <p class="hero__subtitle">慢游天府，细品蜀韵</p>
+                        <a class="button button--light" href="#city-story">走进成都 <span aria-hidden="true">↘</span></a>
+                    </div>
+                    <span class="hero__caption">01 / 宽窄之间，听一城闲适</span>
+                </article>
+                <article class="hero__slide" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="城市街区灯火与夜色" loading="lazy">
+                    <div class="hero__shade"></div>
+                    <div class="hero__copy">
+                        <p class="eyebrow">LANES, LIGHTS &amp; LOCAL LIFE</p>
+                        <h2>灯火锦里<span>，</span>人间烟火</h2>
+                        <p class="hero__subtitle">在老街巷里，遇见悠长的成都时光</p>
+                        <a class="button button--light" href="sights.html">发现城市风景 <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="hero__caption">02 / 锦里夜色，烟火正浓</span>
+                </article>
+                <article class="hero__slide" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="憨态可掬的大熊猫" loading="lazy">
+                    <div class="hero__shade"></div>
+                    <div class="hero__copy">
+                        <p class="eyebrow">A GENTLE MOMENT WITH PANDAS</p>
+                        <h2>竹影之间<span>，</span>与熊猫相逢</h2>
+                        <p class="hero__subtitle">把一份温柔，留给成都的自然时光</p>
+                        <a class="button button--light" href="sights.html">开启一段漫游 <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="hero__caption">03 / 自然相伴，悠然自得</span>
+                </article>
+            </div>
+            <div class="hero__controls">
+                <button class="hero__arrow hero__arrow--previous" type="button" aria-label="上一张">←</button>
+                <div class="hero__dots" aria-label="选择轮播图片">
+                    <button class="hero__dot is-active" type="button" aria-label="第 1 张" aria-current="true"></button>
+                    <button class="hero__dot" type="button" aria-label="第 2 张"></button>
+                    <button class="hero__dot" type="button" aria-label="第 3 张"></button>
+                </div>
+                <button class="hero__arrow hero__arrow--next" type="button" aria-label="下一张">→</button>
+            </div>
+            <span class="hero__index" aria-hidden="true">CHENGDU · 30° 34′ N</span>
+        </section>
+
+        <section class="city-story section-shell" id="city-story">
+            <div class="section-heading">
+                <p class="eyebrow">THE CITY IN A FEW WORDS</p>
+                <h2>一城烟火，<span>半卷闲情</span></h2>
+            </div>
+            <div class="city-story__body">
+                <p>成都，坐落于天府之国的沃野之间。这里有古蜀的悠远回响，也有街巷茶馆的安然日常。清晨，一碗担担面唤醒街巷；午后，盖碗茶让时光放缓；入夜，锦里的灯火映照人间烟火。来成都，放慢脚步，在美食、山水与人情间，读懂一城自在。</p>
+                <a class="text-link" href="culture.html">读一读成都的故事 <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="film-section" aria-labelledby="film-title">
+            <div class="film-section__inner">
+                <div class="section-heading section-heading--light">
+                    <p class="eyebrow">A MOVING POSTCARD</p>
+                    <h2 id="film-title">把成都，<span>看进心里</span></h2>
+                    <p>从街巷晨光到城市夜色，跟随镜头漫游天府。</p>
+                </div>
+                <div class="film-frame">
+                    <video controls playsinline preload="none" poster="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" aria-label="成都城市风光宣传视频">
+                        <source src="../.vscode/%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91/cd1.mp4" type="video/mp4">
+                        您的浏览器暂不支持 HTML5 视频，请使用支持 MP4 的浏览器观看。
+                    </video>
+                </div>
+                <p class="film-section__note">按下播放键，开启一场成都漫游。</p>
+            </div>
+        </section>
+
+        <section class="home-links section-shell" aria-labelledby="home-links-title">
+            <div class="section-heading">
+                <p class="eyebrow">PLAN YOUR CHENGDU MOMENT</p>
+                <h2 id="home-links-title">从喜欢的方式，<span>开始认识成都</span></h2>
+            </div>
+            <div class="home-links__grid">
+                <a class="home-link-card" href="food.html"><span>01 / TASTE</span><strong>寻味成都</strong><span aria-hidden="true">↗</span></a>
+                <a class="home-link-card" href="sights.html"><span>02 / EXPLORE</span><strong>漫游山水</strong><span aria-hidden="true">↗</span></a>
+                <a class="home-link-card" href="culture.html"><span>03 / DISCOVER</span><strong>读懂蜀韵</strong><span aria-hidden="true">↗</span></a>
+                <a class="home-link-card" href="travel.html"><span>04 / JOURNEY</span><strong>自在出发</strong><span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <a class="brand brand--footer" href="index.html">
+                <span class="brand__mark" aria-hidden="true">蜀</span>
+                <span class="brand__name">蜀韵<span>·</span>成都</span>
+            </a>
+            <p>慢游天府，细品蜀韵。</p>
+            <small>© 2026 蜀韵·成都 · 一城烟火，半卷闲情</small>
+        </div>
+    </footer>
+</body>
+</html>
